@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VAPS ERP - Superadmin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="nav">
+    <h2 class="logo">VAPS ERP</h2>
+    <p class="nav-head">Main</p>
+    <a class="nav-link" href="#pkgs">Packages</a>
+    <a class="nav-link" href="#subs">Subscriptions</a>
+
+    <p class="nav-head">Support Desk</p>
+    <a class="nav-link" href="#allt">All Tickets</a>
+    <a class="nav-link nav-active" href="#myt">My Tasks</a>
+
+    <p class="nav-head">Analytics</p>
+    <a class="nav-link" href="#supr">Support Report</a>
+    <a class="nav-link" href="#sales">Sales Report</a>
+    <a class="nav-link" href="#tenr">Tenant Report</a>
+  </aside>
+
+  <main class="main">
+    <header class="header">
+      <h3>Superadmin Console</h3>
+      <div class="user">
+        <span>Admin User</span>
+        <div class="ava">A</div>
+      </div>
+    </header>
+
+    <section class="view" id="pkgs">
+      <h2>Packages</h2>
+      <p class="sub">Manage available ERP packages</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Basic</h3>
+          <p>Essential features for small teams</p>
+          <strong>$99/month</strong>
+          <button>Edit Package</button>
+        </div>
+        <div class="card">
+          <h3>Pro</h3>
+          <p>Advanced tools for growing businesses</p>
+          <strong>$299/month</strong>
+          <button>Edit Package</button>
+        </div>
+        <div class="card">
+          <h3>Enterprise</h3>
+          <p>Full suite for large organizations</p>
+          <strong>$799/month</strong>
+          <button>Edit Package</button>
+        </div>
+      </div>
+      <button class="add">+ Add New Package</button>
+    </section>
+
+    <section class="view" id="subs">
+      <h2>Subscriptions</h2>
+      <p class="sub">Active tenant subscriptions</p>
+      <table class="tbl">
+        <thead>
+          <tr><th>Tenant</th><th>Package</th><th>Start Date</th><th>Status</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Gamma LLC</td><td>Pro</td><td>2025-01-15</td><td><span class="tag tag-act">Active</span></td><td><button class="btn-s">View</button></td></tr>
+          <tr><td>Delta Co</td><td>Basic</td><td>2025-03-20</td><td><span class="tag tag-act">Active</span></td><td><button class="btn-s">View</button></td></tr>
+          <tr><td>Zeta Inc</td><td>Enterprise</td><td>2025-06-10</td><td><span class="tag tag-pend">Pending</span></td><td><button class="btn-s">Renew</button></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="view" id="allt">
+      <h2>All Tickets</h2>
+      <p class="sub">All support tickets from tenants</p>
+      <div class="item">
+        <div><small>TC-1004 • Gamma LLC • Priority: High</small><strong>Issue description 4</strong></div>
+        <span class="tag tag-comp">Completed</span>
+      </div>
+      <div class="item">
+        <div><small>TC-1005 • Delta Co • Priority: Medium</small><strong>Issue description 5</strong></div>
+        <span class="tag tag-pend">Pending</span>
+      </div>
+      <div class="item">
+        <div><small>TC-1021 • Zeta Inc • Priority: Low</small><strong>Issue description 21</strong></div>
+        <span class="tag tag-comp">Completed</span>
+      </div>
+      <div class="row-b mt">
+        <div class="row-c">
+          <button>Filter</button>
+          <button class="btn-o">Export</button>
+        </div>
+        <button class="add">+ New Ticket</button>
+      </div>
+    </section>
+
+    <section class="view" id="myt">
+      <h2>My Tasks</h2>
+      <p class="sub">Tickets assigned to you</p>
+      <div class="item">
+        <div><small>TC-1004 • Gamma LLC • Due: Today</small><strong>Issue description 4</strong></div>
+        <div class="row-c"><span class="tag tag-comp mr">Completed</span><button class="btn-s">View</button></div>
+      </div>
+      <div class="item">
+        <div><small>TC-1005 • Delta Co • Due: Tomorrow</small><strong>Issue description 5</strong></div>
+        <div class="row-c"><span class="tag tag-pend mr">Pending</span><button class="btn-s">Start</button></div>
+      </div>
+      <div class="item">
+        <div><small>TC-1021 • Zeta Inc • Due: Dec 28</small><strong>Issue description 21</strong></div>
+        <div class="row-c"><span class="tag tag-comp mr">Completed</span><button class="btn-s">View</button></div>
+      </div>
+    </section>
+
+    <section class="view" id="supr">
+      <h2>Support Report</h2>
+      <p class="sub">Support desk performance overview</p>
+      <div class="rgrid">
+        <div class="rcard"><h3>Total Tickets</h3><strong>156</strong><small class="t-ok">+12%</small></div>
+        <div class="rcard"><h3>Open Tickets</h3><strong>23</strong><small class="t-bad">-5%</small></div>
+        <div class="rcard"><h3>Avg. Resolution</h3><strong>2.4 days</strong><small class="t-ok">-0.3 days</small></div>
+        <div class="rcard"><h3>Satisfaction</h3><strong>94%</strong><small class="t-warn">+1%</small></div>
+      </div>
+    </section>
+
+    <section class="view" id="sales">
+      <h2>Sales Report</h2>
+      <p class="sub">Subscription revenue overview</p>
+      <div class="chart">Monthly Revenue Chart</div>
+      <table class="tbl">
+        <thead><tr><th>Month</th><th>New Subs</th><th>Revenue</th><th>Growth</th></tr></thead>
+        <tbody>
+          <tr><td>Oct 2025</td><td>12</td><td>$45,200</td><td class="t-ok">+8%</td></tr>
+          <tr><td>Nov 2025</td><td>18</td><td>$68,400</td><td class="t-ok">+15%</td></tr>
+          <tr><td>Dec 2025</td><td>15</td><td>$52,300</td><td class="t-bad">-5%</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="view" id="tenr">
+      <h2>Tenant Report</h2>
+      <p class="sub">All active tenants overview</p>
+      <table class="tbl">
+        <thead><tr><th>Tenant</th><th>Package</th><th>Users</th><th>Storage</th><th>Last Active</th></tr></thead>
+        <tbody>
+          <tr><td>Gamma LLC</td><td>Pro</td><td>45</td><td>120 GB</td><td><span class="t-ok">Today</span></td></tr>
+          <tr><td>Delta Co</td><td>Basic</td><td>12</td><td>35 GB</td><td><span class="t-warn">Yesterday</span></td></tr>
+          <tr><td>Zeta Inc</td><td>Enterprise</td><td>120</td><td>450 GB</td><td><span class="t-bad">3 days ago</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</div>
+</body>
+</html>
